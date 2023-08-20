@@ -40,6 +40,6 @@ pyrogram>=2.0.30
  ujson 
  wget 
  pytz
-
+ dnspython==2.3.0
 
   
