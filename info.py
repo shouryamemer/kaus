@@ -21,7 +21,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "6521114181:AAHneaNsxQ6qIkvkdGt76DglMpi8mo3
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://telegra.ph/file/920470c69bc26426d019e.jpg https://telegra.ph/file/ba941bb33f3ec8ede35a0.jpg https://telegra.ph/file/45fba6a707d70b5b49ed2.jpg https://telegra.ph/file/34f0aa1fc5d0f4975625f.jpg https://telegra.ph/file/29912fe58766a3da41706.jpg https://telegra.ph/file/353947cdef83ea641afba.jpg https://telegra.ph/file/848680130c4f9d61dd99c.jpg https://telegra.ph/file/efeaec39efb273b2d372a.jpg https://telegra.ph/file/cc6c586660f6e11e074e7.jpg https://telegra.ph/file/f8947edaa35c3ba5207cb.jpg https://telegra.ph/file/5b551ee5fdb396f6aabe9.jpg https://telegra.ph/file/cc4cb3e72f0a15d968ac0.jpg https://telegra.ph/file/fcde1fd1a3134ae999f1f.jpg https://telegra.ph/file/b5debb5a07f17184da5e2.jpg https://telegra.ph/file/5df5fe6db59cac1e10f14.jpg https://telegra.ph/file/97f78ea86b69898bbb984.jpg https://telegra.ph/file/3e0feb21d22a38b043393.jpg')).split() #SAMPLE PIC
+PICS = (environ.get('PICS', 'https://graph.org/file/1b095711094d7d04d197a.jpg')).split() #SAMPLE PIC
 NOR_IMG = environ.get("NOR_IMG", "https://te.legra.ph/file/a27dc8fe434e6b846b0f8.jpg")
 MELCOW_VID = environ.get("MELCOW_VID", "https://t.me/howtodownloadmoviestamilhd/70")
 SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/15c1ad448dfe472a5cbb8.jpg")
@@ -36,15 +36,15 @@ auth_channel = environ.get('AUTH_CHANNEL')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1001719940076')
-reqst_channel = environ.get('REQST_CHANNEL_ID', '-1001597663461')
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '')
+reqst_channel = environ.get('REQST_CHANNEL_ID', '')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://culprit:cucumber@cluster0.hhocxt9.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
@@ -56,13 +56,13 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 MAX_B_TN = environ.get("MAX_B_TN", "5")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/tamilmovies4Krio')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Teamrioupdates')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/colletion_movie')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/new_tamil_movies_hd_1')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/howtodownloadmoviestamilhd/65')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 MSG_ALRT = environ.get('MSG_ALRT', 'Hello Nanbha and Nanbis ❤️')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'rionetworksupport')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001902166167'))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'kalai_support')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
